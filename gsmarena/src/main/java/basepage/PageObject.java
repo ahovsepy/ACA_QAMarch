@@ -11,14 +11,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import javax.xml.xpath.XPathExpression;
 
 public class PageObject {
-    WebDriver driver;
+    public WebDriver driver;
     public  PageObject(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
 
     public boolean isElementPresent(final String elementxpath){
-        return (new WebDriverWait(driver,10).until(new ExpectedCondition<Boolean>() {
+        return (new WebDriverWait(driver,20).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d){
                 return d.findElement(By.xpath(elementxpath)) != null;
             }

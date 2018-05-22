@@ -1,6 +1,12 @@
-<suite name="Suite">
-
-    <test name="Test1" >
+<suite name="Searchtest">
+    <parameter name="driver.prop" value="webdriver.gecko.driver"></parameter>
+    <parameter name="driver.path" value="C:\Users\Narine\Downloads\geckodriver-v0.15.0-win32\geckodriver.exe"></parameter>
+    <test name="SearchSanityTest" >
+        <classes>
+           <class name="SearchTest" />
+        </classes>
+    </test>
+    <test name="FirstTest" >
         <classes>
             <class name="TestClass" />
         </classes>

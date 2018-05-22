@@ -54,5 +54,30 @@ public class TestClass extends TestBase {
 
     }
 
+    /**
+    *Year slider functionality testing
+    *Step 1: Open GSMArena.com
+     * Step 2: Click Phone Finder button
+     * Step 3: Click  and move right YEAR Slider lower icon
+     * Step 4: Click  and move left YEAR Slider upper icon
+    *
+     */
+    @Test
+    public void yearSlidermove() throws InterruptedException {
+        GSMArenaHomePage homepage = new GSMArenaHomePage(driver);
+        Assert.assertTrue(homepage.isElementPresent(PhoneFinderBasicPage.phonefinderxpath));
+        homepage.phoneFinderBasicPage.clickPhoneFinder();
+
+        PhoneFinderPage phoneFinderPage = new PhoneFinderPage(driver);
+        Assert.assertTrue(phoneFinderPage.isElementPresent(PhoneFinderPage.yearslidermin));
+        String allResult = phoneFinderPage.resultPage.getResultsText();
+        try {
+            phoneFinderPage.slideYearMin();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
+
 
 }
