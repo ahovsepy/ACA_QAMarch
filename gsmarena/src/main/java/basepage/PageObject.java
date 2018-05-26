@@ -18,11 +18,11 @@ public class PageObject {
     }
 
     public boolean isElementPresent(final String elementxpath){
-        return (new WebDriverWait(driver,20).until(new ExpectedCondition<Boolean>() {
+        return new WebDriverWait(driver,10).until(new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver d){
                 return d.findElement(By.xpath(elementxpath)) != null;
             }
-        }));
+        });
     }
 
     public WebElement waitForElementPresent(final String elementXPath) {

@@ -18,7 +18,7 @@ public class HeaderPage extends PageObject {
         burgericonelement.click();
     }
 
-    public static final String navbarxpath = "//ul[contains(@class,'main-menu-list')]";
+    public static final String navbarxpath = "//ul[contains(@class,'main-menu-list')]//a[text()='Home']";
     @FindBy(xpath = navbarxpath)
     WebElement navbarelement;
     public Boolean isNavbarVisible(){
@@ -37,7 +37,7 @@ public class HeaderPage extends PageObject {
         topsearchelement.sendKeys(text);
     }
 
-    public static final String searchbuttongoxpath = "//div[@class = 'search-buttons']/a[text() = 'Go']";
+    public static final String searchbuttongoxpath = "//div[@class='search-buttons']/a[text() = 'Go']";
     @FindBy(xpath = searchbuttongoxpath)
     WebElement searchbuttongoelement;
     public void clicktopSearchButtonGo(){
@@ -45,7 +45,7 @@ public class HeaderPage extends PageObject {
         searchbuttongoelement.click();
     }
 
-    public static final String searchbuttonadvancedxpath = "//div[@class = 'search-buttons']/a[text() = 'Advanced']";
+    public static final String searchbuttonadvancedxpath = "//div[@class='search-buttons']/a[text() = 'Advanced']";
     @FindBy(xpath = searchbuttonadvancedxpath)
     WebElement searchbuttonadvancedelement;
     public void clicktopSearchButtonAdvanced(){
@@ -53,7 +53,7 @@ public class HeaderPage extends PageObject {
         searchbuttonadvancedelement.click();
     }
 
-    public static final String searchresultsxpath = "//div[@class = 'makers']";
+    public static final String searchresultsxpath = "//div[@class='makers']/h3[text()='Specs']";
     @FindBy(xpath = searchresultsxpath)
     WebElement searchresultselement;
     public boolean isSearchResultVisible(){

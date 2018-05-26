@@ -35,8 +35,8 @@
                 <configuration>
                     <suiteXmlFiles>
                         <file>src/test/resources/${testngxml}</file>
-
                     </suiteXmlFiles>
+
 
                 </configuration>
             </plugin>

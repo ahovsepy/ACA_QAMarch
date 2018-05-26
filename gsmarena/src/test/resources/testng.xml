@@ -1,14 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Searchtest">
-    <parameter name="driver.prop" value="webdriver.gecko.driver"></parameter>
-    <parameter name="driver.path" value="C:\Users\Narine\Downloads\geckodriver-v0.15.0-win32\geckodriver.exe"></parameter>
+    <parameter name="driver.prop" value="webdriver.gecko.driver"/>
+    <parameter name="driver.path" value="C:\Users\Narine\Downloads\geckodriver-v0.15.0-win32\geckodriver.exe"/>
     <test name="SearchSanityTest" >
         <classes>
            <class name="SearchTest" />
         </classes>
     </test>
-    <test name="FirstTest" >
+    <test name="SanityTest" >
         <classes>
-            <class name="TestClass" />
+            <class name="NavBarSanityTest" />
+        </classes>
+    </test>
+    <test name="ElementsFunctionalityTest" >
+        <classes>
+            <class name="PhoneFinderFormElementsFunctionalityTest" />
         </classes>
     </test>
 </suite>
